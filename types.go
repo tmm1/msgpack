@@ -171,7 +171,7 @@ func (fs *fields) OmitEmpty(strct reflect.Value) []*field {
 func getFields(typ reflect.Type, fallbackTag string) *fields {
 	fs := newFields(typ)
 
-	var omitEmpty bool
+	var omitEmpty bool = true
 	for i := 0; i < typ.NumField(); i++ {
 		f := typ.Field(i)
 
